@@ -1,0 +1,377 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --b4: rgba(0, 0, 0, 0.04);
+    --b10: rgba(0, 0, 0, 0.10);
+    --b20: rgba(0, 0, 0, 0.20);
+    --b30: rgba(0, 0, 0, 0.30);
+    --b79: rgba(0, 0, 0, 0.79);
+    --b90: rgba(0, 0, 0, 0.9);
+
+    --g1: #3D9E01;
+    --g2: #2e7104;
+    --y: #979A0D;
+    --r: #FF2626;
+
+    --w: #ffffff;
+
+    --fnormal: 25px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: url('images/bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.notifyContainer {
+    position: fixed;
+    bottom: 80px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    display: none;
+    overflow: visible;
+}
+
+.notifyContent {
+    position: absolute;
+    display: flex;
+    background-color: var(--w);
+    padding: 8px 15px;
+    border-radius: 5px;
+    height: 25px;
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.123));
+}
+
+.notifyTextGreen {
+    color: var(--g1);
+    font-weight: 500;
+}
+
+.notifyTextRed {
+    color: var(--r);
+    font-weight: 500;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*---- header */
+.header {
+    background-color: var(--w);
+    display: flex;
+    justify-content: center;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.headerText {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--b90);
+}
+
+
+/* header------ */
+
+/* ----middle container */
+
+.middleContentWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+
+}
+
+.middleContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    flex-direction: column;
+    gap: 15px;
+    width: 85%;
+    height: 80%;
+}
+
+/* ----input content */
+.inputContent {
+    width: 100%;
+    display: flex;
+    height: 70px;
+    gap: 5px;
+    flex-direction: row;
+}
+
+.inputText {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 25px;
+    font-weight: 400;
+    color: var(--b90);
+}
+
+.addTask {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--g1);
+    color: var(--w);
+}
+
+.addTask:hover {
+    background-color: var(--g2);
+}
+
+.addTask svg {
+    fill: var(--w);
+}
+
+.addTaskText {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+/* input content --- */
+
+/* ----task lists */
+.taskLists {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 5px;
+    flex-direction: row;
+}
+
+.taskList {
+    flex-grow: 1;
+    background-color: var(--w);
+    border-radius: 10px;
+    color: var(--w);
+    height: 400px;
+    flex-basis: 300px;
+}
+
+.taskHead {
+    font-size: 22px;
+    font-weight: 500;
+    display: flex;
+    height: 60px;
+    border-radius: 10px 10px 0px 0px;
+    align-items: center;
+    padding-left: 25px;
+    gap: 5px;
+}
+
+.taskHead svg {
+    fill: var(--w);
+}
+
+.pendingHead {
+    background-color: var(--y);
+}
+
+.completedHead {
+    background-color: var(--g1);
+}
+
+.contentWrapper {
+    padding: 15px 15px;
+}
+
+.circle {
+    min-width: 7px;
+    min-height: 7px;
+    border-radius: 50%;
+}
+
+.pendingCircle {
+    background-color: var(--y);
+}
+
+.taskTab {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 10px;
+}
+
+.taskTab:hover {
+    background-color: var(--b4);
+}
+
+.taskTabLeft {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: red;
+}
+
+.tabContent {
+    line-height: 1.1;
+}
+
+.tabContent small {
+    font-size: 12px;
+    color: var(--b79);
+    font-weight: 500;
+}
+
+.tabContent p {
+    font-size: 25px;
+    color: var(--b90);
+    font-weight: 500;
+}
+
+.taskName {
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.taskTabRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+}
+
+.taskTabRight svg {
+    fill: var(--b30);
+    padding: 8px;
+}
+
+.taskContent {
+    height: 30vh;
+    overflow-y: scroll;
+}
+
+.taskContent::-webkit-scrollbar {
+    width: 2px;
+}
+
+.taskContent::-webkit-scrollbar:hover {
+    width: 10px;
+}
+
+.taskContent::-webkit-scrollbar-thumb {
+    background-color: var(--b20);
+    outline: none;
+    border-radius: 20px;
+}
+
+svg.tickIcon:hover {
+    fill: var(--g1);
+}
+
+svg.removeIcon:hover {
+    fill: var(--r);
+}
+
+.completedCircle {
+    background-color: var(--g1);
+}
+
+.taskContentC p{
+    /* line-height: 1.5; */
+    margin-top: 8px;
+}
+.status {
+    color: var(--b30);
+    font-weight: 500;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* footer */
+footer {
+    background-color: var(--b30);
+    display: flex;
+    justify-content: center;
+    padding: 10px 15px;
+    color: var(--w);
+}
+
+footer p a {
+    color: var(--w);
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width:1100px){
+    body{
+        background: #136a8a;
+    }
+    .taskLists{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .inputContent{
+        height: 17em;
+    }
+    footer {
+        background-color: var(--b79);
+    }
+}
+@media (max-width:1100px){
+    .taskLists{
+        flex-direction: column;
+    }
+    .inputContent{
+        height: 17em;
+    }
+}
+@media (max-width:650px){
+    .inputContent{
+        flex-direction: column;
+        gap: 7px;
+    }
+    .inputText{
+        height: 60px;
+        font-size: 20px;
+    }
+    .addTask{
+        height: 50px;
+        width: 100%;
+    }
+}
+@media (max-width:550px){
+    .headerText{
+        font-size: 27px;
+    }
+    }
+@media (max-width:400px){
+    .headerText{
+        font-size: 15px;
+        text-align: center;
+        width: 100%;
+    }
+    }
