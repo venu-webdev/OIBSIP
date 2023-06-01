@@ -28,8 +28,6 @@ $('.historyShowBtn').on('click', function (e) {
 
 });
 
-
-
 $('.rTextLarge').on('input', function (e) {
     exp = $('.rTextLarge').text();
     rTextSmall.css('opacity', '100');
