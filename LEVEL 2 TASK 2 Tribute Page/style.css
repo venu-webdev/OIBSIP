@@ -1,0 +1,543 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --theme: #B000FF;
+    --white: #ffffff;
+    --black: #000000;
+    --headerBg: #06040E;
+    --line: rgba(255,255,255,0.5);
+    --sectionBg: #141414;
+    --w80: rgba(255,255,255,0.8);
+    --w50: rgba(255,255,255,0.5);
+}
+
+.cursor {
+    z-index: 999;
+    width: 60px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dot{
+    pointer-events: none;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+body {
+    position: relative;
+    cursor: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--headerBg);
+    color: white;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar:hover {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--theme);
+    outline: none;
+    border-radius: 20px;
+}
+
+#hero{
+    width: 100%;
+    height: 100vh;
+    background: url('images/0.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    color: white;
+    margin-right: 150px;
+}
+
+.heroContainer{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    margin-left: 150px;
+}
+
+.heroContent{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    line-height: 1.1;
+}
+
+.smallContent{
+    font-size: 35px;
+    color: var(--w80);
+    letter-spacing: -2px;
+}
+.bigContent{
+    font-size: 5rem;
+    line-height: 0.5;
+    font-weight: 700;
+    letter-spacing: -3px;
+}
+.purpleText{
+    letter-spacing: -3px;
+    color: var(--theme);
+}
+.brText{
+    line-height: 1.5;
+}
+
+.heroContentFooter{
+    letter-spacing: 2px;
+}
+.heroFooter img{
+    margin-top: 150px;
+    margin-bottom: 40px;
+}
+
+/* achivements section */
+#achivements{
+    width: 100vw;
+    height: 14203pxpx;
+    background-color: var(--sectionBg);
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 80px;
+    margin-top: -8px;
+    position: relative;
+}
+
+.achivementsHeader{
+    color: white;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.expandedText{
+    font-size: 30px;
+    letter-spacing: 20px;
+    font-weight: 300;
+}
+
+.timelineWrapper{
+    position: relative;
+}
+.timelineLine{
+    z-index: 1;
+    width: 100%;
+    height: 98.5%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* background-color: red; */
+}
+
+.line{
+    margin-top: 200px;
+    background-color: var(--line);
+    width: 1px;
+    height: 100%;
+}
+
+
+/* box */
+.box{
+    z-index: 10;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    width: 100vw;
+    padding: 80px 0px;
+}
+
+.boxLeftContent{
+    display: flex;
+    text-align: right;
+    flex-direction: column;
+    gap: 5px;
+    flex-grow: 0;     
+    flex-shrink: 0;   
+    flex-basis: 50vw;
+}
+
+.yearContent{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.boxTitle{
+    margin-top: 25px;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 0.999;
+    letter-spacing: -1px;
+}
+.boxsubtitle{
+    margin-top: 15px;
+    font-size: 15px;
+    line-height: 1.2;
+    color: var(--w50);
+}
+.boxCircle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--theme);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.boxRightContent{
+    flex-grow: 1;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 50vw;
+}
+
+.boxRightContent img{
+    width: 400px;
+}
+
+.box1RightContent{
+    text-align: right;
+}
+.box1LeftContent{
+    text-align: left;
+}
+.box1Circle{
+    background-color: white;
+}
+
+.afterEducation{
+    text-align: center;
+    padding: 80px 0px;
+}
+
+.storyGoes{
+    padding: 90px 0px;
+    text-align: center;
+    background-color: var(--sectionBg);
+}
+
+.footer{
+    width: 100vw;
+    height: 70%;
+    background-color: var(--sectionBg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#finalImage{
+    background-image: url('images/33.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    width: 100vw;
+    background-origin: border-box;
+    background-clip: content-box;
+    filter: contrast(115%);
+    filter: saturate(40%)
+}
+
+.footerContent{
+    background-color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+}
+.footerText a{
+    color: var(--theme);
+    text-decoration: none;
+}
+.footerText a:hover{
+    text-decoration: underline;
+}
+
+.d-none{
+    display: none;
+}
+.moveToTop{
+    position: fixed;
+    width: 50px;
+    bottom: 150px;
+    right: 50px;
+    z-index: 989;
+}
+
+
+@media (max-width:1600px){
+    .bigContent {
+        font-size: 4rem;
+    }
+    .boxTitle{
+        font-size: 45px;
+    }
+    .boxsubtitle{
+        font-size: 14px;
+    }
+}
+@media (max-width:1500px){
+    .boxTitle{
+        font-size: 42px;
+    }
+    .boxsubtitle{
+        font-size: 12px;
+    }
+    .heroFooter img {
+        margin-top: 44px;
+    }
+}
+@media (max-width:1400px){
+    .boxTitle{
+        font-size: 38px;
+    }
+    .boxsubtitle{
+        font-size: 11px;
+    }
+    .line{
+        margin-top: 33px;
+    }
+}
+@media (max-width:1250px){
+    .heroFooter{
+        display: none;
+    }
+    .heroContainer{
+        top: 296px;
+        margin-left: 81px;
+    }
+
+    .bigContent {
+        font-size: 3.2rem;
+        line-height: 0.5;
+        font-weight: 700;
+        letter-spacing: 0px;
+    }
+    .smallContent {
+        font-size: 24px;
+        letter-spacing: 0px;
+    }
+    .purpleText {
+        letter-spacing: 0px;
+    }
+    .boxTitle{
+        font-size: 36px;
+    }
+    .boxsubtitle{
+        font-size: 10px;
+    }
+    .box{
+        gap: 25px;
+    }
+    .boxRightContent img{
+        width: 300px;
+    }
+}
+@media (max-width:1000px){
+    .heroContainer{
+        top: 85px;
+        margin-left: 81px;
+    }
+    .boxTitle{
+        font-size: 31px;
+    }
+    .boxsubtitle{
+        font-size: 10px;
+    }
+    .box{
+        gap: 25px;
+    }
+    .boxRightContent img{
+        width: 250px;
+    }
+}
+@media (max-width:870px){
+    .boxTitle{
+        font-size: 26px;
+    }
+    .boxsubtitle{
+        font-size: 10px;
+    }
+    .box{
+        gap: 20px;
+        padding: 50px 0px;
+    }
+    .boxRightContent img{
+        width: 230px;
+    }
+    .yearContent{
+        font-size: 13px;
+    }
+}
+@media (max-width:870px){
+    .boxTitle{
+        font-size: 26px;
+    }
+    .boxsubtitle{
+        font-size: 10px;
+    }
+    .box{
+        gap: 20px;
+        padding: 34px 0px;
+    }
+    .boxRightContent img{
+        width: 230px;
+    }
+    .yearContent{
+        font-size: 13px;
+    }
+    .expandedText{
+        font-size: 20px;
+        letter-spacing: 14px;
+    }
+}
+@media (max-width:770px){
+    .boxTitle{
+        font-size: 23px;
+        line-height: 1.1;
+        letter-spacing: 0px;
+    }
+    .boxsubtitle{
+        font-size: 9px;
+    }
+    .box{
+        gap: 10px;
+        padding: 34px 0px;
+    }
+    .boxRightContent img{
+        width: 180px;
+    }
+    .yearContent{
+        font-size: 13px;
+    }
+    .expandedText{
+        font-size: 20px;
+        letter-spacing: 14px;
+    }
+    
+    .boxCircle {
+        width: 6px;
+        height: 6px;
+    }
+}
+@media (max-width:630px){
+    .heroContainer{
+        text-align: center;
+    }
+    .smallContent{
+        font-size: 22px;
+    }
+    .bigContent{
+        font-size: 2.7rem;
+    }
+    .boxTitle{
+        margin-top: 5px;
+        font-size: 25px;
+    }
+    .boxsubtitle{
+        display: none;
+    }
+    .box{
+        gap: 12px;
+        padding: 30px 0px;
+        flex-direction: column-reverse;
+    }
+    .box1{
+        flex-direction: column;
+    }
+    .boxLeftContent{
+        text-align: center;
+        flex-basis: 0;
+    }
+    .boxRightContent{
+        flex-basis: 0;
+    }
+    .boxRightContent img{
+        width: 168px;
+    }
+    .boxCircle{
+        display: none;
+    }
+    .yearContent{
+        font-size: 12px;
+    }
+    .expandedText{
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+    .boxCircle {
+        width: 6px;
+        height: 6px;
+    }
+    .achivementsHeader {
+        font-size: 34px;
+    }
+    .timelineLine{
+        display: none;
+    }
+}
+
+@media (max-width:600px){
+    .heroContainer{
+        
+    width: 100vw;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 0px;
+    padding-top: 63px;
+    position: relative;
+    }
+    .boxTitle{
+        margin-top: 5px;
+        font-size: 21px;
+    }
+    .boxRightContent img{
+        width: 158px;
+    }
+}
+@media (max-width:400px){
+    .smallContent{
+        font-size: 14px;
+    }
+    .bigContent{
+        font-size: 1.5rem;
+    }
+    .boxTitle{
+        margin-top: 5px;
+        font-size: 21px;
+    }
+    .boxRightContent img{
+        width: 158px;
+    }
+}
